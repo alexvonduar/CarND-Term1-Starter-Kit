@@ -18,7 +18,7 @@ Using Anaconda consists of the following:
 
 ## Installation
 
-**Download** the version of `miniconda` that matches your system. Make sure you download the version for Python 3.5.
+**Download** the latest version of `miniconda` that matches your system.
 
 **NOTE**: There have been reports of issues creating an environment using miniconda `v4.3.13`. If it gives you issues try versions `4.3.11` or `4.2.12` from [here](https://repo.continuum.io/miniconda/).
 
@@ -53,6 +53,15 @@ If you are on Windows, **rename**
 **Create** carnd-term1.  Running this command will create a new `conda` environment that is provisioned with all libraries you need to be successful in this program.
 ```
 conda env create -f environment.yml
+```
+
+*Note*: Some Mac users have reported issues installing TensorFlow using this method. The cause is unknown but seems to be related to `pip`. For the time being, we recommend opening environment.yml in a text editor and swapping
+```yaml
+    - tensorflow==0.12.1
+```
+with
+```yaml
+    - https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.12.1-py3-none-any.whl
 ```
 
 **Verify** that the carnd-term1 environment was created in your environments:
