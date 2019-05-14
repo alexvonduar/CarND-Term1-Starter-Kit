@@ -11,7 +11,7 @@ for Python programs but can package and distribute any software.
 Using Anaconda consists of the following:
 
 1. Install [`miniconda`](http://conda.pydata.org/miniconda.html) on your computer
-2. Create a new `conda` [environment](http://conda.pydata.org/docs/using/envs.html) using this project
+2. Create a new `conda` [environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) using this project
 3. Each time you wish to work, activate your `conda` environment
 
 ---
@@ -62,6 +62,12 @@ conda env create -f environment.yml
 with
 ```yaml
     - https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.12.1-py3-none-any.whl
+```
+If you have encountered a No module named 'requests' error, try to add in a line under 'pip' line in the environment.yml in a text editor
+
+with
+```yaml
+    - requests
 ```
 
 **Verify** that the carnd-term1 environment was created in your environments:
